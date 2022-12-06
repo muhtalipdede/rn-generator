@@ -1,0 +1,26 @@
+{
+  "name": "@muhtalipdede/rn-generator",
+  "version": "1.0.5",
+  "description": "React Native Screen and Component Generator",
+  "main": "build/index.js",
+  "bin": "build/index.js",
+  "scripts": {
+    "build": "rimraf ./build && scripts/build.js",
+    "dev": "nodemon",
+    "start": "npm run build && node build/index.js"
+  },
+  "keywords": [
+    "generator",
+    "cli"
+  ],
+  "author": "Muhtalip Dede",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.11.10",
+    "nodemon": "^2.0.20",
+    "prettier": "2.8.0",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.3"
+  }
+}
