@@ -1,7 +1,7 @@
 import fs from "fs";
 
-export default function createDir(screenName: string) {
-  const screenDir = `./generated/screens`;
+export default function createDir(projectDir: string, screenName: string) {
+  const screenDir = `${projectDir}/screens`;
 
   if (!fs.existsSync(screenDir)) {
     fs.mkdirSync(screenDir);

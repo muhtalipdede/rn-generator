@@ -16,8 +16,10 @@
 </table>
 
 ## About
-This repository contains code generator for React Native projects in from of a Command Line Tool. Currently it only generates Screen codes. It contains some basic react native components. The supported components are listed below. The number of supported core components will increase in future package versions. In addition, custom components can be developed.
+This repository contains code generator for React Native projects in from of a Command Line Tool. Currently it only generates Navigation and Screen codes. It contains some basic react native components. The number of supported core components will increase in future package versions. In addition, custom components can be developed.
 Warning: This package ( [React Native Code Generator @muhtalipdede/rn-generator][package] ) does not have a stable version yet. It is an experiential project.
+
+Additional Information: react-native-community typescript project is used as project template. For more information https://github.com/react-native-community/react-native-template-typescript
 
 ## Usage
 
@@ -26,75 +28,98 @@ Create a rn-generator.json file in the root of your project
 echo [] > rn-generator.json
 ````
 
-Add screens (as a Array) properties (as a Object) (useState, useEffect, functions, children - react native base compenents) in the rn-generator.json
+Add Project Navigations and screens (as a Array) properties (as a Object) (useState, useEffect, functions, children - react native base compenents) in the rn-generator.json
 
 For more [Examples](./examples)
 ```json
 [
-    {
-        "type": "screen",
-        "name": "Screen1",
-        "state": [
-            {
-                "name": "state1",
-                "type": "string"
-            }
-        ],
-        "effect": [
-            {
-                "name": "effect1",
-                "type": "useEffect",
-                "content": "return state1",
-                "dependencies": ["state1"]
-            }
-        ],
-        "functions": [
-            {
-                "name": "function1",
-                "type": "function"
-                "content": "return true;"
-                "params": [
-                    {
-                        "name": "param1",
-                        "type": "string"
-                    }
-                ]
-            }
-        ],
+  {
+    "type": "navigation",
+    "name": "App",
+    "children": [
+      {
+        "type": "navigation",
+        "name": "Example",
         "children": [
-            {
-                "type": "safe-area-view",
-                "children": [
-                    {
-                        "type": "input",
-                        "name": "Input1",
-                        "value": "state1",
-                        "onChange": "setState1",
-                        "style": {
-                            "margin": 10,
-                            "padding": 10,
-                            "borderWidth": 1,
-                            "borderColor": "black",
-                            "borderRadius": 5,
-                            "backgroundColor": "white",
-                            "color": "black",
-                            "fontSize": 20,
-                            "fontWeight": "bold",
-                            "textAlign": "center",
-                            "width": "100%",
-                            "height": 50
-                        }
-                    }
+          {
+            "type": "screen",
+            "name": "Example1",
+            "functions": [
+              {
+                "name": "goTo",
+                "params": [
+                  {
+                    "name": "screenName",
+                    "type": "string"
+                  }
                 ]
-            }
+              }
+            ],
+            "children": [
+              {
+                "type": "safe-area-view" ,
+                "style": {
+                  "flex": 1,
+                  "backgroundColor": "#FFFBEB",
+                  "justifyContent": "center",
+                  "alignContent": "center"
+                },
+                "children": [
+                  {
+                    "type": "view",
+                    "style": {
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "backgroundColor": "#495579",
+                      "borderRadius": 10,
+                      "borderWidth": 2,
+                      "borderColor": "#263159",
+                      "height": 50,
+                      "margin": 10
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "style": {
+                          "fontSize": 20,
+                          "color": "#FFFBEB"
+                        },
+                        "text": "Hello World"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "This is a simple example of a React Native app built with the",
+                    "style": {
+                      "fontSize": 20,
+                      "color": "#263159",
+                      "textAlign": "center"
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": "@muhtalipdede/rn-generator CLI tool",
+                    "style": {
+                      "fontSize": 20,
+                      "color": "#FF7000",
+                      "textAlign": "center"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
         ]
-    }
+      }
+    ]
+  }
 ]
 ```
 
 Run the following command in your terminal prompt:
 ```sh
-npx @muhtalipdede/rn-generator
+npx @muhtalipdede/rn-generator project-name
 ```
 
 ## Maintainers

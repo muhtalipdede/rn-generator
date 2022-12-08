@@ -2,7 +2,5 @@
 
 node_modules
 build
-generated
 
 *-lock.json
-rn-generator.json

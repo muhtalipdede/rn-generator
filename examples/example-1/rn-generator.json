@@ -1,0 +1,83 @@
+[
+  {
+    "type": "navigation",
+    "name": "App",
+    "children": [
+      {
+        "type": "navigation",
+        "name": "Example",
+        "children": [
+          {
+            "type": "screen",
+            "name": "Example1",
+            "functions": [
+              {
+                "name": "goTo",
+                "params": [
+                  {
+                    "name": "screenName",
+                    "type": "string"
+                  }
+                ]
+              }
+            ],
+            "children": [
+              {
+                "type": "safe-area-view" ,
+                "style": {
+                  "flex": 1,
+                  "backgroundColor": "#FFFBEB",
+                  "justifyContent": "center",
+                  "alignContent": "center"
+                },
+                "children": [
+                  {
+                    "type": "view",
+                    "style": {
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "backgroundColor": "#495579",
+                      "borderRadius": 10,
+                      "borderWidth": 2,
+                      "borderColor": "#263159",
+                      "height": 50,
+                      "margin": 10
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "style": {
+                          "fontSize": 20,
+                          "color": "#FFFBEB"
+                        },
+                        "text": "Hello World"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "This is a simple example of a React Native app built with the",
+                    "style": {
+                      "fontSize": 20,
+                      "color": "#263159",
+                      "textAlign": "center"
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": "@muhtalipdede/rn-generator CLI tool",
+                    "style": {
+                      "fontSize": 20,
+                      "color": "#FF7000",
+                      "textAlign": "center"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

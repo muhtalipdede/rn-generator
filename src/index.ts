@@ -1,22 +1,28 @@
 import fs from "fs";
 import { execSync } from "child_process";
 import configGenerator from "./config-generator";
+import { exit } from "process";
 
-// fs.rmSync("./generated", { recursive: true, force: true });
+const args = process.argv.slice(2);
+const projectName = args[0];
 
-const generatedDir = `./generated`;
-
-if (!fs.existsSync(generatedDir)) {
-    fs.mkdirSync(generatedDir);
+if (!projectName) {
+    console.error(
+        "\x1b[31m",
+        "\nProject not found",
+        "\nPlease add a projectName to your command",
+        "\nExample: npx @muhtalipdede/rn-generator my-project"
+    );
+    exit();
 }
 
 if (fs.existsSync("./rn-generator.json")) {
     const config = JSON.parse(fs.readFileSync("./rn-generator.json", "utf-8"));
-    configGenerator(config);
-    console.log("Generated files");
-
+    configGenerator(projectName, config);
     execSync("npx prettier --write ./generated");
-    console.log("Formatted files");
+    // execSync(`cd generated/${projectName} && npm install && npm run android && cd ../..`)
+    console.log("\x1b[32m", "Project created");
+    console.log("\x1b[32m", `cd generated/${projectName} && npm install && npm run android`);
 } else {
     console.error(
         "\x1b[31m",

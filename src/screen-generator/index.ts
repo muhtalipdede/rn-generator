@@ -6,9 +6,9 @@ import stateGenerator from "./state-generator";
 import effectGenerator from "./effect-generator";
 import functionGenerator from "./function-generator";
 
-export default function screenGenerator(screen: any) {
+export default function screenGenerator(projectDir: string, screen: any) {
   const { name, state, effect, functions, children } = screen;
-  const screenDirPath = createDir(name);
+  const screenDirPath = createDir(projectDir, name);
 
   const screenComponentPath = screenDirPath + `/${name}Screen.tsx`;
   const screenComponentContent = `
