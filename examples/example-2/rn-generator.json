@@ -1,0 +1,148 @@
+[
+    {
+        "type": "navigation",
+        "name": "App",
+        "children": [
+            {
+                "type": "navigation",
+                "name": "Home",
+                "children": [
+                    {
+                        "type": "screen",
+                        "name": "Home",
+                        "children": [
+                            {
+                                "type": "view",
+                                "style": {
+                                    "flex": 1,
+                                    "backgroundColor": "#001253"
+                                },
+                                "children": [
+                                    {
+                                        "type": "text",
+                                        "style": {
+                                            "fontSize": 20,
+                                            "textAlign": "center",
+                                            "margin": 10,
+                                            "color": "#E14D2A"
+                                        },
+                                        "text": "Welcome to @muhtalipdede/rn-generator"
+                                    },
+                                    {
+                                        "type": "input",
+                                        "style": {
+                                            "height": 40,
+                                            "borderColor": "#E14D2A",
+                                            "borderWidth": 1,
+                                            "margin": 10,
+                                            "borderRadius": 5
+                                        },
+                                        "placeholder": "Email",
+                                        "placeholderTextColor": "#E14D2A",
+                                        "value": ""
+                                    },
+                                    {
+                                        "type": "input",
+                                        "style": {
+                                            "height": 40,
+                                            "borderColor": "#E14D2A",
+                                            "borderWidth": 1,
+                                            "margin": 10,
+                                            "borderRadius": 5
+                                        },
+                                        "placeholder": "Password",
+                                        "placeholderTextColor": "#E14D2A",
+                                        "value": ""
+                                    },
+                                    {
+                                        "type": "touchable-opacity",
+                                        "style": {
+                                            "borderRadius": 5,
+                                            "backgroundColor": "#E14D2A",
+                                            "alignItems": "center",
+                                            "justifyContent": "center",
+                                            "height": 40,
+                                            "width": "50%",
+                                            "alignSelf": "center",
+                                            "borderWidth": 1,
+                                            "borderColor": "#E14D2A"
+                                        },
+                                        "children": [
+                                            {
+                                                "type": "text",
+                                                "style": {
+                                                    "color": "#fff"
+                                                },
+                                                "text": "Login"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "navigation",
+                "name": "About",
+                "children": [
+                    {
+                        "type": "screen",
+                        "name": "About",
+                        "children": [
+                            {
+                                "type": "view",
+                                "style": {
+                                    "flex": 1,
+                                    "backgroundColor": "#fff"
+                                },
+                                "children": [
+                                    {
+                                        "type": "text",
+                                        "style": {
+                                            "fontSize": 20,
+                                            "textAlign": "center",
+                                            "margin": 10
+                                        },
+                                        "text": "Welcome to React Native!"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "navigation",
+                "name": "Contact",
+                "children": [
+                    {
+                        "type": "screen",
+                        "name": "Contact",
+                        "children": [
+                            {
+                                "type": "view",
+                                "style": {
+                                    "flex": 1,
+                                    "backgroundColor": "#fff"
+                                },
+                                "children": [
+                                    {
+                                        "type": "text",
+                                        "style": {
+                                            "fontSize": 20,
+                                            "textAlign": "center",
+                                            "margin": 10
+                                        },
+                                        "text": "Welcome to React Native!"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

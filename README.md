@@ -122,6 +122,10 @@ Run the following command in your terminal prompt:
 npx @muhtalipdede/rn-generator project-name
 ```
 
+## ScreenShots
+<img src="./examples/example-1/Screenshot_1.png" alt="drawing" width="200" />
+<img src="./examples/example-2/Screenshot_1.png" alt="drawing" width="200"/>
+
 ## Maintainers
 - Muhtalip Dede ([**@muhtalipdede**](https://github.com/muhtalipdede))
 

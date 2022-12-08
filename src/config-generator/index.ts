@@ -14,7 +14,9 @@ export default function configGenerator(projectName: string, config: any) {
 
   const projectDir = `./generated/${projectName}`;
 
-  execSync(`cd generated && npx react-native init ${projectName} --template react-native-template-typescript && cd ..`);
+  if (!fs.existsSync(projectDir)) {
+    execSync(`cd generated && npx react-native init ${projectName} --template react-native-template-typescript && cd ..`);
+  }
 
   installPackages(projectDir);
   rewriteAppTsx(projectDir);
